@@ -1,0 +1,21 @@
+.violet {
+  // Backgrounds
+  --bg-main: hsl(268, 75%, 9%);
+  --bg-toggle-keypad: hsl(268, 71%, 12%);
+  --bg-screen: hsl(268, 71%, 12%); // same
+
+  // Keys
+  --key-bg-primary: hsl(281, 89%, 26%);
+  --key-shadow-primary: hsl(285, 91%, 52%);
+
+  --key-bg-accent: hsl(176, 100%, 44%);
+  --key-shadow-accent: hsl(177, 92%, 70%);
+
+  --key-bg-secondary: hsl(268, 47%, 21%);
+  --key-shadow-secondary: hsl(290, 70%, 36%);
+
+  // Text
+  --text-primary: hsl(52, 100%, 62%);
+  --text-secondary: hsl(198, 20%, 13%);
+  --text-accent: hsl(0, 0%, 100%);
+}

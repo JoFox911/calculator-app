@@ -1,0 +1,21 @@
+.light {
+  // Backgrounds
+  --bg-main: hsl(0, 0%, 90%);
+  --bg-toggle-keypad: hsl(0, 5%, 81%);
+  --bg-screen: hsl(0, 0%, 93%);
+
+  // Keys
+  --key-bg-primary: hsl(185, 42%, 37%);
+  --key-shadow-primary: hsl(185, 58%, 25%);
+
+  --key-bg-accent: hsl(25, 98%, 40%);
+  --key-shadow-accent: hsl(25, 99%, 27%);
+
+  --key-bg-secondary: hsl(45, 7%, 89%);
+  --key-shadow-secondary: hsl(35, 11%, 61%);
+
+  // Text
+  --text-primary: hsl(60, 10%, 19%);
+  --text-secondary: hsl(60, 10%, 19%);
+  --text-accent: hsl(0, 0%, 100%);
+}
