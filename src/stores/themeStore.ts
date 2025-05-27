@@ -24,6 +24,7 @@ export const useThemeStore = defineStore('theme', {
       const html = document.documentElement
       html.classList.remove(...availableThemes)
       html.classList.add(this.resolvedTheme)
+      html.classList.add('theme-set')
     },
     initTheme() {
       const saved = localStorage.getItem('theme') as ThemeOption

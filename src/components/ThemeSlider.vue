@@ -1,26 +1,32 @@
 <template>
-  <div class="custom-slider">
-    <div class="theme-labels">
-      <span
-        v-for="(_, i) in availableThemes"
-        :key="i"
-        class="theme-label"
-      >
-        {{ i + 1 }}
-      </span>
+  <div class="theme-slider-container">
+    <label class="theme-slider-title">
+      Theme
+    </label>
+
+    <div class="theme-slider">
+      <div class="theme-labels">
+        <span
+          v-for="(_, i) in availableThemes"
+          :key="i"
+          class="theme-label"
+        >
+          {{ i + 1 }}
+        </span>
+      </div>
+      <input
+        ref="slider"
+        :value="index"
+        type="range"
+        min="0"
+        :max="availableThemes.length - 1"
+        step="1"
+        class="slider"
+        aria-label="Select theme"
+        :aria-valuetext="availableThemes[index]"
+        @input="onInput"
+      />
     </div>
-    <input
-      ref="slider"
-      :value="index"
-      @input="onInput"
-      type="range"
-      min="0"
-      :max="availableThemes.length - 1"
-      step="1"
-      class="slider"
-      aria-label="Select theme"
-      :aria-valuetext="availableThemes[index]"
-    />
   </div>
 </template>
 
@@ -43,38 +49,58 @@ function onInput(event: Event) {
 </script>
 
 <style lang="scss" scoped>
-.custom-slider {
+.theme-slider-container {
   // --trackHeight: 0.5rem;
   // --thumbRadius: 1rem;
   --trackHeight: 24px;
   --thumbRadius: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  gap: 30px;
+  font-size: 12px;
+  font-weight: var(--font-weight-bold);
+}
+
+.theme-slider-title {
+  line-height: var(--trackHeight);
+  text-transform: uppercase;
+  transition:
+    color var(--transition-basic);
+}
+
+.theme-slider {
   width: 64px;
 }
 
 /* style the input element with type "range" */
-.custom-slider input[type="range"] {
+.theme-slider input[type="range"] {
   width: 100%;
   position: relative;
   appearance: none;
   background-color: var(--bg-toggle-keypad);
-  transition: background-color 0.2s ease;
+  transition:
+    background-color var(--transition-basic);
   border-radius: 999px;
   z-index: 0;
+  display: block;
 }
 
 
 
 /* `::-webkit-slider-runnable-track` targets the track (background) of a range slider in chrome and safari browsers. */
-.custom-slider input[type="range"]::-webkit-slider-runnable-track {
+.theme-slider input[type="range"]::-webkit-slider-runnable-track {
   appearance: none;
   background-color: var(--bg-toggle-keypad);
   height: var(--trackHeight);
   border-radius: 999px;
   padding: 0 5px;
+  transition:
+    background-color var(--transition-basic);
 }
 
 
-.custom-slider input[type="range"]::-webkit-slider-thumb {
+.theme-slider input[type="range"]::-webkit-slider-thumb {
   position: relative;
   width: var(--thumbRadius);
   height: var(--thumbRadius);
@@ -84,7 +110,9 @@ function onInput(event: Event) {
   pointer-events: all;
   appearance: none;
   z-index: 1;
-  transition: transform 0.3s ease;
+  transition:
+    transform var(--transition-basic),
+    background-color var(--transition-basic);
 }
 
 .theme-labels {
@@ -92,8 +120,7 @@ function onInput(event: Event) {
   justify-content: space-between;
   height: 20px;
   margin: 0 13%;
-  color: var(--text-primary);
-  font-weight: var(--font-weight-medium);
-  font-size: 12px;
+  transition:
+    color var(--transition-basic);
 }
 </style>

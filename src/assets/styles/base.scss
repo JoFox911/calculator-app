@@ -5,25 +5,35 @@
   margin: 0;
 }
 
-// :focus-visible {
-//   outline: 1px solid var(--color-focus-ring);
-//   outline-offset: 2px;
-// }
+:focus-visible {
+  outline: 4px solid var(--key-bg-primary);
+}
+
+h1 {
+  all: unset;
+}
 
 html {
   scroll-behavior: smooth;
+}
+
+html:not(.theme-set) body {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+html.theme-set body {
+  opacity: 1;
 }
 
 body {
   color: var(--text-secondary);
   background: var(--bg-main);
   transition:
-    color 0.5s,
-    background-color 0.5s;
-
+    color var(--transition-basic),
+    background-color var(--transition-basic);
   font-family: var(--font-family);
-  font-size: var(--text-body);
-  font-weight: var(---font-weight-bold);
+  font-weight: var(--font-weight-medium);
   line-height: 1.5;
   margin: 0;
   padding: 0;

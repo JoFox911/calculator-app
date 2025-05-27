@@ -1,31 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
 
 :root {
+  --transition-basic: 2s ease;
   /* ✍️ Typography */
   --font-family: 'League Spartan', sans-serif;
 
-  --text-body: 2rem;
+  --text-body: 1.75rem;
+  --text-logo: 2rem;
+  --text-numbers: 2.5rem;
+  --text-display: 3.5rem;
 
-  /* --text-logo: 1.25rem;
-  --text-heading: 1.75rem;
-  --text-title: 1.125rem;
-  --text-body: 1rem;
-  --text-caption: 0.875rem; */
-
-  --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
   /* 📏 Spacing */
-  --spacing-xxs: 0.25rem;
   --spacing-xs: 0.5rem;
-  --spacing-sm: 0.75rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
 
   /* 🟦 Radius */
-  --border-radius-sm: 0.5rem;
-  --border-radius-md: 0.75rem;
-  --border-radius-lg: 1rem;
-  --border-radius-xl: 1.25rem;
+  --border-radius: 0.5rem;
 }
