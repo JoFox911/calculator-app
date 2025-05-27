@@ -28,7 +28,7 @@ themeStore.initTheme()
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px; // todo
+  padding: 0 var(--spacing-md);
   margin: auto;
   max-width: 570px;
   min-height: 100vh;
