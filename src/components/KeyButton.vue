@@ -12,25 +12,25 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import type { ButtonVariant } from '@/types/button'
+import { ButtonVariantEnum } from '@/types/button'
 
 const props = defineProps<{
   label: string
-  variant?: 'primary' | 'secondary' | 'accent'
+  variant?: ButtonVariant
 }>()
 
 defineEmits(['press'])
 
 const styleClass = computed(() => {
-  const map = {
-    primary: 'primary',
-    secondary: 'secondary',
-    accent: 'accent'
-  }
-  return map[props.variant ?? 'primary']
+  const variantClass = props.variant ?? ButtonVariantEnum.Primary
+  return `${variantClass}`
 })
 </script>
 
 <style scoped lang="scss">
+@use '@/assets/styles/_mixins.scss' as mixins;
+
 .key-button {
   width: 100%;
   text-align: center;
@@ -42,28 +42,19 @@ const styleClass = computed(() => {
     box-shadow var(--transition-basic);
   user-select: none;
   cursor: pointer;
-  line-height: 50px; /* Adjust as needed */
+  line-height: var(--line-height);
 }
 
 .primary {
-  background-color: var(--key-bg-primary);
-  box-shadow: inset 0 -4px var(--key-shadow-primary);
-  color: var(--text-btn-primary);
-  font-size: var(--text-body);
+  @include mixins.button-variant(var(--key-bg-primary), var(--key-shadow-primary), var(--text-btn-primary), var(--text-body));
 }
 
 .secondary {
-  background-color: var(--key-bg-secondary);
-  box-shadow: inset 0 -4px var(--key-shadow-secondary);
-  color: var(--text-btn-secondary);
-  font-size: var(--text-numbers);
+  @include mixins.button-variant(var(--key-bg-secondary), var(--key-shadow-secondary), var(--text-btn-secondary), var(--text-numbers));
   font-weight: var(--font-weight-bold);
 }
 
 .accent {
-  background-color: var(--key-bg-accent);
-  box-shadow: inset 0 -4px var(--key-shadow-accent, var(--key-shadow-secondary));
-  color: var(--text-btn-accent);
-  font-size: var(--text-body);
+  @include mixins.button-variant(var(--key-bg-accent), var(--key-shadow-accent), var(--text-btn-accent), var(--text-body));
 }
 </style>

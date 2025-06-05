@@ -1,5 +1,4 @@
-@use './styles/variables.scss';
-@use './styles/theme-dark.scss';
-@use './styles/theme-light.scss';
-@use './styles/theme-violet.scss';
 @use './styles/base.scss';
+@use './styles/_theme-dark.scss';
+@use './styles/_theme-light.scss';
+@use './styles/_theme-violet.scss';
