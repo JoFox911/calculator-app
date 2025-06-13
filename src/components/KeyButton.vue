@@ -35,7 +35,7 @@ const styleClass = computed(() => {
   width: 100%;
   text-align: center;
   border-radius: var(--border-radius);
-  padding: var(--spacing-xs);
+  padding: var(--spacing-xxs);
   transition:
     background-color var(--transition-basic),
     color var(--transition-basic),
@@ -43,18 +43,28 @@ const styleClass = computed(() => {
   user-select: none;
   cursor: pointer;
   line-height: var(--line-height);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+
+  @media (max-width: 560px) {
+    font-size: var(--font-size-md);
+  }
 }
 
 .primary {
-  @include mixins.button-variant(var(--key-bg-primary), var(--key-shadow-primary), var(--text-btn-primary), var(--font-size-lg));
+  @include mixins.button-variant(var(--key-bg-primary), var(--key-shadow-primary), var(--text-btn-primary));
 }
 
 .secondary {
-  @include mixins.button-variant(var(--key-bg-secondary), var(--key-shadow-secondary), var(--text-btn-secondary), var(--font-size-xxl));
-  font-weight: var(--font-weight-bold);
+  @include mixins.button-variant(var(--key-bg-secondary), var(--key-shadow-secondary), var(--text-btn-secondary));
+  font-size: var(--font-size-xxl);
+
+  @media (max-width: 560px) {
+    font-size: var(--font-size-xl);
+  }
 }
 
 .accent {
-  @include mixins.button-variant(var(--key-bg-accent), var(--key-shadow-accent), var(--text-btn-accent), var(--font-size-lg));
+  @include mixins.button-variant(var(--key-bg-accent), var(--key-shadow-accent), var(--text-btn-accent));
 }
 </style>

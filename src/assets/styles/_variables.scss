@@ -5,8 +5,9 @@
 
 
   // --font-size-xs: 0.625rem; // 10px (якщо потрібно для дуже дрібних міток)
-  --font-size-sm: 0.75rem;
-  --font-size-md: 1rem;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.25rem;
   --font-size-lg: 1.75rem;
   --font-size-xl: 2rem;
   --font-size-xxl: 2.5rem;
@@ -19,7 +20,8 @@
   --line-height: 3rem;
 
   /* 📏 Spacing */
-  --spacing-xs: 0.5rem;
+  --spacing-xxs: 0.5rem;
+  --spacing-xs: 0.75rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;

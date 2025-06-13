@@ -25,7 +25,7 @@ const displayFontSize = computed(() => {
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .display {
   min-height: 80px;
   width: 100%;
@@ -43,5 +43,11 @@ const displayFontSize = computed(() => {
     background-color var(--transition-basic),
     color var(--transition-basic);
   font-size: var(--font-size-xxxl);
+  font-weight: var(--font-weight-bold);
+
+  @media (max-width: 560px) {
+    font-size: var(--font-size-xxl);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
 }
 </style>

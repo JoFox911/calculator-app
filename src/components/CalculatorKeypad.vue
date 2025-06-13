@@ -92,5 +92,10 @@ onUnmounted(() => {
   .wide {
     grid-column: span 2;
   }
+
+  @media (max-width: 560px) {
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+  }
 }
 </style>

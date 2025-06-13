@@ -54,7 +54,7 @@ function onInput(event: Event) {
   flex-direction: row;
   align-items: end;
   gap: var(--spacing-md);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);
 }
 
