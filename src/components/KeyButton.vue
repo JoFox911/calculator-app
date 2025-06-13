@@ -46,15 +46,15 @@ const styleClass = computed(() => {
 }
 
 .primary {
-  @include mixins.button-variant(var(--key-bg-primary), var(--key-shadow-primary), var(--text-btn-primary), var(--text-body));
+  @include mixins.button-variant(var(--key-bg-primary), var(--key-shadow-primary), var(--text-btn-primary), var(--font-size-lg));
 }
 
 .secondary {
-  @include mixins.button-variant(var(--key-bg-secondary), var(--key-shadow-secondary), var(--text-btn-secondary), var(--text-numbers));
+  @include mixins.button-variant(var(--key-bg-secondary), var(--key-shadow-secondary), var(--text-btn-secondary), var(--font-size-xxl));
   font-weight: var(--font-weight-bold);
 }
 
 .accent {
-  @include mixins.button-variant(var(--key-bg-accent), var(--key-shadow-accent), var(--text-btn-accent), var(--text-body));
+  @include mixins.button-variant(var(--key-bg-accent), var(--key-shadow-accent), var(--text-btn-accent), var(--font-size-lg));
 }
 </style>

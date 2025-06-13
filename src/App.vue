@@ -50,8 +50,8 @@ header, main {
 }
 
 .app-title {
-  font-size: var(--text-logo);
-  line-height: var(--text-numbers);
+  font-size: var(--font-size-xl);
+  line-height: var(--font-size-xxl);
   transition:
     color var(--transition-basic);
 }

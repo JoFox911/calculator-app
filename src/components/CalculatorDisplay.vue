@@ -1,13 +1,28 @@
 <template>
-  <output class="display" role="status" aria-live="polite">
+  <output class="display" role="status" aria-live="polite" :style="displayFontSize">
     {{ value }}
   </output>
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  value: string
-}>()
+import { computed } from 'vue'
+
+const props = defineProps({
+  value: {
+    type: String,
+    required: true,
+    default: '0'
+  }
+})
+
+const displayFontSize = computed(() => {
+  if (props.value.length > 10 && props.value.length <= 15) {
+    return { fontSize: 'var(--font-size-xxl)' }
+  } else if (props.value.length > 15) {
+    return { fontSize: 'var(--font-size-xl)' }
+  }
+  return {}
+})
 </script>
 
 <style scoped>
@@ -27,6 +42,6 @@ defineProps<{
   transition:
     background-color var(--transition-basic),
     color var(--transition-basic);
-  font-size: var(--text-display);
+  font-size: var(--font-size-xxxl);
 }
 </style>
