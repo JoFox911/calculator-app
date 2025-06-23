@@ -1,3 +1,5 @@
+GH Pages https://jofox911.github.io/calculator-app/
+
 # Calculator App
 
 This project is a modern calculator built with **Vue 3** and **Vite**, showcasing best practices in frontend development.
