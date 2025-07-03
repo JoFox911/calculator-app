@@ -29,11 +29,17 @@ export const useThemeStore = defineStore('theme', {
     initTheme() {
       const saved = localStorage.getItem('theme') as ThemeOption
       this.theme = selectableThemes.includes(saved) ? saved : 'system'
-      this.applyTheme()
 
       if (this.theme === 'system') {
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.applyTheme)
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+        mediaQuery.addEventListener?.('change', this.applyTheme)
+
+        if (typeof mediaQuery.matches !== 'boolean') {
+          this.theme = 'dark'
+        }
       }
+
+      this.applyTheme()
     }
   }
 })
