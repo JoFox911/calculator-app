@@ -1,4 +1,4 @@
-@use './_variables.scss';
+@use './variables.scss';
 
 .light {
   // Backgrounds
@@ -17,8 +17,6 @@
   --key-shadow-secondary: hsl(35, 11%, 61%);
 
   // Text
-  --text-btn-primary: hsl(60, 10%, 19%);
-
   --text-btn-primary: hsl(0, 0%, 100%);
   --text-btn-secondary: hsl(60, 10%, 19%);
   --text-btn-accent: hsl(0, 0%, 100%);

@@ -1,4 +1,4 @@
-@use './_variables.scss';
+@use "./variables.scss";
 
 *,
 *::before,
@@ -11,12 +11,20 @@
   outline: 4px solid var(--key-bg-primary);
 }
 
-h1 {
-  all: unset;
-}
-
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-secondary);
+  background: var(--bg-main);
+  transition: color var(--transition-basic),
+    background-color var(--transition-basic);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
 }
 
 html:not(.theme-set) body {
@@ -26,6 +34,10 @@ html:not(.theme-set) body {
 
 html.theme-set body {
   opacity: 1;
+}
+
+h1 {
+  all: unset;
 }
 
 button {
@@ -39,17 +51,4 @@ button {
   border: none;
   color: inherit;
   font: inherit;
-}
-
-body {
-  color: var(--text-secondary);
-  background: var(--bg-main);
-  transition:
-    color var(--transition-basic),
-    background-color var(--transition-basic);
-  font-family: var(--font-family);
-  font-weight: var(--font-weight-medium);
-  line-height: 1.5;
-  margin: 0;
-  padding: 0;
 }
