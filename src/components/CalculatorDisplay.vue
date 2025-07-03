@@ -1,5 +1,5 @@
 <template>
-  <output class="display" role="status" aria-live="polite" :style="displayFontSize">
+  <output class="display" aria-live="polite" :style="displayFontSize">
     {{ value }}
   </output>
 </template>
@@ -38,7 +38,7 @@ const displayFontSize = computed(() => {
   color: var(--text-primary);
   background-color: var(--bg-screen);
   border-radius: var(--border-radius);
-  padding: var(--spacing-lg) var(--spacing-md);
+  padding: var(--spacing-md);
   transition:
     background-color var(--transition-basic),
     color var(--transition-basic);

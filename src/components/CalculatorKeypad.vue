@@ -1,12 +1,12 @@
 <template>
   <div class="keypad">
     <KeyButton
-      v-for="(key, i) in keys"
+      v-for="key in keys"
       :key="key.value"
       :label="key.label"
       :variant="key.variant"
       :class="key.class ?? ''"
-      :tabindex="i"
+      :tabindex="0"
       @press="$emit('press', key.value)"
     />
   </div>

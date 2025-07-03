@@ -1,13 +1,12 @@
 <template>
-  <div
+  <button
     class="key-button"
     :class="styleClass"
-    role="button"
+    type="button"
     @click="$emit('press')"
-    @keydown.enter.space="$emit('press')"
   >
     {{ label }}
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">
